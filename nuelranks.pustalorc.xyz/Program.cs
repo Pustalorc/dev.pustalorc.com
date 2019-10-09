@@ -85,17 +85,18 @@ namespace nuelranks.pustalorc.xyz
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
+        Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.ConfigureKestrel(options =>
                 {
-                    webBuilder.ConfigureKestrel(options =>
+                    options.Limits.MinRequestBodyDataRate = null;
+                    options.ListenLocalhost(50051, listenOptions =>
                     {
-                        options.Limits.MinRequestBodyDataRate = null;
-                        options.ListenLocalhost(50051, listenOptions =>
-                        {
-                            listenOptions.Protocols = HttpProtocols.Http1AndHttp2;
-                        });
+                        listenOptions.Protocols = HttpProtocols.Http1AndHttp2;
                     });
-                });
+                })
+            .UseStartup<Startup>();
+            });
     }
 }
