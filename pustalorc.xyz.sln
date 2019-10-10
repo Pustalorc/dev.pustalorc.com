@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29403.142
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pustalorc.xyz", "pustalorc.xyz\pustalorc.xyz.csproj", "{5DCBE108-FD8C-4DEC-9119-B808DB45CDA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nuelranks.pustalorc.xyz", "nuelranks.pustalorc.xyz\nuelranks.pustalorc.xyz.csproj", "{5780928A-7CCD-4B46-97AE-26260429B69D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api.pustalorc.xyz", "api.pustalorc.xyz\api.pustalorc.xyz.csproj", "{F6AE41A7-A7E5-4505-A7F9-273B985145C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{5DCBE108-FD8C-4DEC-9119-B808DB45CDA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DCBE108-FD8C-4DEC-9119-B808DB45CDA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DCBE108-FD8C-4DEC-9119-B808DB45CDA1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5780928A-7CCD-4B46-97AE-26260429B69D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5780928A-7CCD-4B46-97AE-26260429B69D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5780928A-7CCD-4B46-97AE-26260429B69D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5780928A-7CCD-4B46-97AE-26260429B69D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6AE41A7-A7E5-4505-A7F9-273B985145C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6AE41A7-A7E5-4505-A7F9-273B985145C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6AE41A7-A7E5-4505-A7F9-273B985145C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6AE41A7-A7E5-4505-A7F9-273B985145C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
