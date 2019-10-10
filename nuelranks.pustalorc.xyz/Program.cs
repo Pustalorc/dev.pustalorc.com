@@ -64,11 +64,11 @@ namespace nuelranks.pustalorc.xyz
                             }
                             else
                             {
-                                players.Add(new SimplePlayer { Name = player, Rank = "", ProfilePicture = "", MMR = 0 });
+                                players.Add(new SimplePlayer {Name = player, Rank = "", ProfilePicture = "", MMR = 0});
                             }
                         }
 
-                        SimpleTeams.Add(new SimpleTeam() { Name = team.name, Members = players });
+                        SimpleTeams.Add(new SimpleTeam() {Name = team.name, Members = players});
                     }
                 }
 
@@ -84,19 +84,19 @@ namespace nuelranks.pustalorc.xyz
             CreateHostBuilder(args).Build().Run();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder =>
-            {
-                webBuilder.ConfigureKestrel(options =>
+        public static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            return Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    options.Limits.MinRequestBodyDataRate = null;
-                    options.ListenLocalhost(50051, listenOptions =>
-                    {
-                        listenOptions.Protocols = HttpProtocols.Http1AndHttp2;
-                    });
-                })
-            .UseStartup<Startup>();
-            });
+                    webBuilder.ConfigureKestrel(options =>
+                        {
+                            options.Limits.MinRequestBodyDataRate = null;
+                            options.ListenLocalhost(50051,
+                                listenOptions => { listenOptions.Protocols = HttpProtocols.Http1AndHttp2; });
+                        })
+                        .UseStartup<Startup>();
+                });
+        }
     }
 }
