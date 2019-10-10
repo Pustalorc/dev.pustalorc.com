@@ -11,7 +11,7 @@
             foreach (var team in @Program.SimpleTeams)
             {
                 <li class="list-group-item">
-                    Team: @team.Name
+                    Team: <a href="https://thenuel.com/team/@team.Id?gameContext=5734">@team.Name</a>
                     <ul class="list-group-horizontal">
                         @{
                             foreach (var player in team.Members)
@@ -23,7 +23,7 @@
                                 else
                                 {
                                     <li class="list-group-item">
-                                        <img class="player-image" src="@player.ProfilePicture" alt="@player.ProfilePicture"/>
+                                        <a href="https://r6.tracker.network/profile/pc/@player.Name"><img class="player-image" src="@player.ProfilePicture" alt="@player.ProfilePicture" /></a>
                                         <p>UPlay Name: @player.Name</p>
                                         <p>Current MMR: @player.MMR</p>
                                         <p>Current Rank: <img class="player-rank" src="@player.Rank" alt="@player.Rank"/></p>

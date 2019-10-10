@@ -68,7 +68,7 @@ namespace nuelranks.pustalorc.xyz
                             }
                         }
 
-                        SimpleTeams.Add(new SimpleTeam() {Name = team.name, Members = players});
+                        SimpleTeams.Add(new SimpleTeam() {Id = team.id, Name = team.name, Members = players});
                     }
                 }
 
