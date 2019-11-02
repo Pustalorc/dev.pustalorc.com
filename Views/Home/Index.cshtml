@@ -6,12 +6,18 @@
     <h1 class="display-4">Vicente "Pustalorc" Pastor</h1>
     <p>Self-Employed Software Developer and Computer Science Student at Coventry University.</p>
     <br/>
-    <div class="list-group list-group-horizontal-xl">
-        <a asp-action="Portfolio">
-            <img class="list-group-item img-thumbnail border-0" src="~/img/portfolio.png" alt="portfolio"/>
-        </a>
-        <a asp-action="About">
-            <img class="list-group-item img-thumbnail border-0" src="~/img/about.png" alt="about me"/>
-        </a>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a asp-action="Portfolio">
+                    <img class="correctImageSize" src="~/img/portfolio.png" alt="portfolio" />
+                </a>
+            </div>
+            <div class="col">
+                <a asp-action="About">
+                    <img class="correctImageSize" src="~/img/about.png" alt="about me" />
+                </a>
+            </div>
+        </div>
     </div>
 </div>
