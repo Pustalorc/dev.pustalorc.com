@@ -13,12 +13,7 @@ a {
 }
 
 .project {
-    width: 432px;
-}
-
-.correctImageSize {
-    height: 432px;
-    width: 432px;
+    width: auto;
 }
 
 .btn-primary {
