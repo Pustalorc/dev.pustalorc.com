@@ -12,6 +12,10 @@ a {
   color: #0366d6;
 }
 
+.border-darker {
+    border-color: #141a20 !important;
+}
+
 .project {
     width: auto;
 }
