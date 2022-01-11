@@ -283,7 +283,7 @@ const IndexPage = () => {
                         </Grid>
                         <Grid item sm={4}>
                             <Typography variant="body1" align='center' color="inherit">
-                                Contact: <Link href="mailto:@pustalorc.com" underline="hover">E-Mail</Link> | <Link href="https://www.linkedin.com/in/vicente-p-676002173/" underline="hover">LinkedIn</Link>
+                                Contact: <Link href="mailto:contact@pustalorc.com" underline="hover">E-Mail</Link> | <Link href="https://www.linkedin.com/in/vicente-p-676002173/" underline="hover">LinkedIn</Link>
                             </Typography>
                         </Grid>
                         <Grid item sm={4}>
