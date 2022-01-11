@@ -18,6 +18,7 @@
     "@mui/material": "latest",
     "gatsby": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-helmet": "latest"
   }
 }
