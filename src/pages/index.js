@@ -50,35 +50,36 @@ const IndexPage = () => {
                             </Typography>
                             <br/>
                             <Typography variant="body2" gutterBottom style={centerJustified}>
-                                The aim of this project was to solve something that had not been done before in the Unturned community: How do we define a base or how can we tell what is a base, from a list of elements?
+                                The aim of this project was to solve something that had not been done before in the Unturned community: How do we define a base? Or more precisely: how can we tell what a base is from a single dimensional list of elements?
                             </Typography>
                         </Container>
                     </Grid>
                     <Grid item xs={6}>
                         <Container maxWidth="sm">
                             <Typography align="center" variant="h4" gutterBottom component="div">
-                                <Link href="https://github.com/Pustalorc/FrequencyCache" underline="hover" color="#50f0ff">Frequency Access Cache</Link>
+                                <Link href="https://github.com/Pustalorc/MySqlConnectorWrapper" underline="hover" color="#50f0ff">MySql Connector Wrapper</Link>
                             </Typography>
                             <Typography variant="body2" gutterBottom style={centerJustified}>
-                                A published NuGet project that aims to create a basic in-memory cache of any input generic type.
+                                A published NuGet library that abstracts both <Link href="https://www.nuget.org/packages/MySql.Data/" underline="hover" color="#50f0ff">MySql.Data</Link> and <Link href="https://www.nuget.org/packages/MySqlConnector/" underline="hover" color="#50f0ff">MySqlConnector</Link> for easy use.
                             </Typography>
                             <br/>
                             <Typography variant="body2" gutterBottom style={centerJustified}>
-                                The aim of this project is to make the development of any other product that requires a basic cache a matter of simple class instantiation and simple method calls.
+                                The aim of this project was to make the development of any product that requires a MySql database a simpler and more lightweight experience.
+                                Thanks to the abstraction, this library could be expanded into any other connectors for any database that inherits C#'s <Link href="https://docs.microsoft.com/en-us/dotnet/api/system.data.common.dbconnection" underline="hover" color="#50f0ff">DbConnection class</Link>.
                             </Typography>
                         </Container>
                     </Grid>
                     <Grid item xs={12}>
                         <Container maxWidth="sm">
                             <Typography align="center" variant="h4" gutterBottom component="div">
-                                <Link href="https://github.com/Pustalorc/MySqlConnectorWrappers" underline="hover" color="#50f0ff">MySql Connector Wrappers</Link>
+                                <Link href="https://github.com/Pustalorc/FrequencyCache" underline="hover" color="#50f0ff">Frequency Access Cache</Link>
                             </Typography>
                             <Typography variant="body2" gutterBottom style={centerJustified}>
-                                A set of published NuGet libraries for both MySql.Data and MySqlConnector that implements the <Link href="https://github.com/Pustalorc/FrequencyCache" underline="hover" color="#50f0ff">Frequency Access Cache</Link> project for built in query + query result caching.
+                                A published NuGet project that created a basic cache where old or less used objects would cease to be cached.
                             </Typography>
                             <br/>
                             <Typography variant="body2" gutterBottom style={centerJustified}>
-                                The aim of this project is making the development of any product that utilizes or requires a MySql database a much simpler experience.
+                                The aim of this project was to make a simple cache with a frequency of access as the factor that determined if an element should be removed or replaced in cache.
                             </Typography>
                         </Container>
                     </Grid>
