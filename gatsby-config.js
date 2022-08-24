@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Portfolio",
+    title: "Virtual Curriculum Vitae",
     siteUrl: "https://dev.pustalorc.com",
   },
   plugins: [],
