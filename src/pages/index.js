@@ -14,7 +14,7 @@ export default function IndexPage() {
                     </Typography>
                 </Grid>
                 <Grid item xs={6}>
-                    <Typography align="center">
+                    <Typography align="center" component="div">
                         <CleanLink to="/projects">
                             <Button fullWidth={true} sx={{ color: "white" }}>
                                 <Typography align="center" variant="h3">
@@ -25,7 +25,7 @@ export default function IndexPage() {
                     </Typography>
                 </Grid>
                 <Grid item xs={6}>
-                    <Typography align="center">
+                    <Typography align="center" component="div">
                         <CleanLink to="/experience">
                             <Button fullWidth={true} sx={{ color: "white" }}>
                                 <Typography align="center" variant="h3">
@@ -36,7 +36,7 @@ export default function IndexPage() {
                     </Typography>
                 </Grid>
                 <Grid item xs={6}>
-                    <Typography align="center">
+                    <Typography align="center" component="div">
                         <Button fullWidth={true} href="https://github.com/Pustalorc" sx={{ color: "white" }}>
                             <Typography align="center" variant="h3">
                                 Github <OpenInNewIcon fontSize="large" viewBox="12 -12 24 24" />
