@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material/styles";
-import { makeStyles } from "@mui/styles";
 import { Link } from "gatsby";
 import styled from "styled-components";
 
@@ -24,12 +23,6 @@ const themeDark = createTheme({
     }
 });
 
-const useStyles = makeStyles({
-    content: {
-        justifyContent: "center"
-    }
-});
-
 const CleanLink = styled(Link)`
     text-decoration: none;
 
@@ -38,4 +31,4 @@ const CleanLink = styled(Link)`
     }
 `;
 
-export {centerJustified, lightDivider, themeDark, useStyles, CleanLink};
+export {centerJustified, lightDivider, themeDark, CleanLink};

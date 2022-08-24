@@ -1,5 +1,6 @@
 import * as React from "react";
 import { AppBar, Grid, Toolbar, Container, Button } from "@mui/material";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { CleanLink } from "../../utils";
 
 const pages = [ "projects", "experience" ];
@@ -9,11 +10,11 @@ export default function Header() {
         <AppBar position="static">
             <Container maxWidth="lg">
                 <Toolbar>
-                    <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                    <Grid container direction="row" justifyContent="center">
                         <Grid item xs={3}>
                         </Grid>
                         <Grid item xs={6}>
-                            <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }} direction="row" justifyContent="center">
+                            <Grid container direction="row" justifyContent="center">
                                 <Grid item>
                                     <CleanLink to={"/"}>
                                         <Button sx={{ color: "white" }}>
@@ -30,6 +31,11 @@ export default function Header() {
                                         </CleanLink>
                                     </Grid>
                                 ))}
+                                <Grid item>
+                                    <Button href="https://github.com/Pustalorc" sx={{ color: "white" }}>
+                                        Github <OpenInNewIcon fontSize="small" viewBox="12 -12 24 24" />
+                                    </Button>
+                                </Grid>
                             </Grid>
                         </Grid>
                         <Grid item xs={3}>

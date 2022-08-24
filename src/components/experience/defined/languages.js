@@ -27,7 +27,7 @@ export default function Languages() {
                     Language Qualifications
                 </Typography>
             </Container>
-            <Grid container direction="row" justifyContent="center" rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+            <Grid container direction="row" justifyContent="center" rowSpacing={3}>
                 <LanguageFormat
                     Language="English"
                     YearAcchieved="2018"
@@ -36,6 +36,7 @@ export default function Languages() {
                 <LanguageFormat
                     Language="French"
                     Certification="DELF B1"
+                    YearAcchieved="2018"
                 />
                 <LanguageFormat
                     Language="Spanish"

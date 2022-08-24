@@ -26,7 +26,7 @@ export default function Work() {
         <Container>
             <Container>
                 <Typography align="center" variant="h4" gutterBottom component="div">
-                    Professional / Working
+                    Professional Experience
                 </Typography>
             </Container>
             <Grid container direction="row" justifyContent="center" >
@@ -34,7 +34,7 @@ export default function Work() {
                     Company="Grant Thornton"
                     StartYear="2022"
                     EndYear="Today"
-                    PositionTitle="Developer"
+                    PositionTitle="Software Engineer"
                 />
                 <WorkFormat
                     Company="Self-Employed"

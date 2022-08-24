@@ -7,7 +7,7 @@ export default function Private() {
         <Container>
             <Container>
                 <Typography align="center" variant="h3" gutterBottom component="div">
-                    Closed Source / Sold
+                    Closed Source
                 </Typography>
             </Container>
             <Grid container direction="row" justifyContent="center">

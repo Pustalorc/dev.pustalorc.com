@@ -8,16 +8,14 @@ function ProgrammingFormat(props) {
         <ExperienceFormat
             xs={3}
             variant="body1"
-            Title={props.Title}
-            StartYear={props.StartYear}
-            EndYear={props.EndYear}
+            Title={props.Name}
+            StartYear={props.YoE + " Year(s) of Experience"}
         />
     );
 }
 ProgrammingFormat.propTypes = {
-    Title: PropTypes.string,
-    StartYear: PropTypes.string,
-    EndYear: PropTypes.string
+    Name: PropTypes.string,
+    YoE: PropTypes.number
 };
 
 export default function Programming() {
@@ -28,40 +26,46 @@ export default function Programming() {
                     Skills
                 </Typography>
             </Container>
-            <Grid container direction="row" justifyContent="center" rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+            <Grid container direction="row" justifyContent="center" rowSpacing={3}>
                 <ProgrammingFormat
-                    Title="C# / .NET"
-                    StartYear="2016"
-                    EndYear="Today"
+                    Name="C# / .NET"
+                    YoE={6}
                 />
                 <ProgrammingFormat
-                    Title="SQL / MySQL"
-                    StartYear="2016"
-                    EndYear="Today"
+                    Name="SQL / MySQL"
+                    YoE={6}
                 />
                 <ProgrammingFormat
-                    Title="Web Development"
-                    StartYear="2018"
-                    EndYear="Today"
+                    Name="Web Development"
+                    YoE={4}
                 />
                 <ProgrammingFormat
-                    Title="NodeJS"
-                    StartYear="2019"
-                    EndYear="Today"
+                    Name="JavaScript"
+                    YoE={2}
                 />
                 <ProgrammingFormat
-                    Title="ReactJS"
-                    StartYear="2021"
-                    EndYear="Today"
+                    Name="NodeJS"
+                    YoE={2}
                 />
                 <ProgrammingFormat
-                    Title="Python"
-                    StartYear="2019"
-                    EndYear="Today"
+                    Name="ReactJS"
+                    YoE={2}
                 />
                 <ProgrammingFormat
-                    Title="C/C++"
-                    StartYear="2018"
+                    Name="Python"
+                    YoE={2}
+                />
+                <ProgrammingFormat
+                    Name="C/C++"
+                    YoE={1}
+                />
+                <ProgrammingFormat
+                    Name="Amazon Web Services"
+                    YoE={1}
+                />
+                <ProgrammingFormat
+                    Name="Docker"
+                    YoE={1}
                 />
             </Grid>
         </Container>

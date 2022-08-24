@@ -6,7 +6,7 @@ export default function Footer() {
         <AppBar position="static">
             <Container maxWidth="lg">
                 <Toolbar>
-                    <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                    <Grid container rowSpacing={3} direction="row" justifyContent="center">
                         <Grid item xs={4}>
                             <Typography variant="body1" align="left" color="inherit">
                                 © 2022 - Vicente &quot;Pustalorc&quot; Pastor

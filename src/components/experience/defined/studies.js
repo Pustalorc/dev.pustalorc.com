@@ -10,7 +10,7 @@ export default function Studies() {
                     Studies
                 </Typography>
             </Container>
-            <Grid container rowSpacing={3} spacing={5} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+            <Grid container direction="row" justifyContent="center" rowSpacing={3}>
                 <ExperienceFormat
                     xs={12}
                     Title="BSc Computer Science"

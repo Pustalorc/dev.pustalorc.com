@@ -29,7 +29,7 @@ export default function University() {
                 <Project
                     Title="Web-API Project"
                     ShortDescription={
-                        "Another web project with a focus on a split between the back-end and front-end." +
+                        "Another web project with a focus on a split between the back-end and front-end. " +
                         "Back-end was developed with " +
                         renderToString(<Link href="https://koajs.com/" underline="hover" color="#50f0ff">Koa</Link>) +
                         ", whilst frontend was developed with " +
