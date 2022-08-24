@@ -1,5 +1,5 @@
 import * as React from "react";
-import PageFormat from "./format";
+import PageFormat from "../components/format";
 import Projects from "../components/projects/projects";
 
 export default function ProjectPage() {

@@ -15,9 +15,11 @@ export default function Header() {
                         <Grid item xs={6}>
                             <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }} direction="row" justifyContent="center">
                                 <Grid item>
-                                    <Button href="/" sx={{ color: "white" }}>
-                                        Home Page
-                                    </Button>
+                                    <CleanLink to={"/"}>
+                                        <Button sx={{ color: "white" }}>
+                                            Home Page
+                                        </Button>
+                                    </CleanLink>
                                 </Grid>
                                 {pages.map((page) => (
                                     <Grid item key={page}>
