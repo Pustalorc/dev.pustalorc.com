@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 function LanguageFormat(props) {
     return (
         <ExperienceFormat
-            xs={2}
             Title={props.Language}
             StartYear={props.YearAcchieved}
             PositionTitle={props.Certification}
@@ -21,12 +20,10 @@ LanguageFormat.propTypes = {
 
 export default function Languages() {
     return (
-        <Container>
-            <Container>
-                <Typography align="center" variant="h4" gutterBottom component="div">
-                    Language Qualifications
-                </Typography>
-            </Container>
+        <Container maxWidth="xl">
+            <Typography align="center" variant="h4" gutterBottom component="div">
+                Language Qualifications
+            </Typography>
             <Grid container direction="row" justifyContent="center" rowSpacing={3}>
                 <LanguageFormat
                     Language="English"

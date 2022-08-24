@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 function WorkFormat(props) {
     return (
         <ExperienceFormat
-            xs={3}
             Title={props.Company}
             StartYear={props.StartYear}
             EndYear={props.EndYear}
@@ -23,12 +22,10 @@ WorkFormat.propTypes = {
 
 export default function Work() {
     return (
-        <Container>
-            <Container>
-                <Typography align="center" variant="h4" gutterBottom component="div">
-                    Professional Experience
-                </Typography>
-            </Container>
+        <Container maxWidth="xl">
+            <Typography align="center" variant="h4" gutterBottom component="div">
+                Professional Experience
+            </Typography>
             <Grid container direction="row" justifyContent="center" >
                 <WorkFormat
                     Company="Grant Thornton"

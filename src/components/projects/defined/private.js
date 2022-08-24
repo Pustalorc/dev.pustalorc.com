@@ -4,12 +4,10 @@ import Project from "../project";
 
 export default function Private() {
     return (
-        <Container>
-            <Container>
-                <Typography align="center" variant="h3" gutterBottom component="div">
-                    Closed Source
-                </Typography>
-            </Container>
+        <Container maxWidth="xl">
+            <Typography align="center" variant="h3" gutterBottom component="div">
+                Closed Source
+            </Typography>
             <Grid container direction="row" justifyContent="center">
                 <Project
                     Title="Advanced Permissions"

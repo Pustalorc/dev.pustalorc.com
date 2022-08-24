@@ -8,7 +8,7 @@ import Languages from "./defined/languages";
 
 export default function Experience() {
     return (
-        <Container>
+        <Container maxWidth="xl">
             <Work />
             <Divider />
             <Studies />

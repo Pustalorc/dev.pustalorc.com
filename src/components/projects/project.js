@@ -36,14 +36,8 @@ GetLicense.propTypes = {
 };
 
 function Project(props) {
-    let customXs = 6;
-
-    if (props.xs) {
-        customXs = props.xs;
-    }
-
     return (
-        <Grid item xs={customXs}>
+        <Grid item>
             <Container maxWidth="sm">
                 <Typography align="center" variant="h5" gutterBottom component="div">
                     {GetTitle(props)} {GetLicense(props)}
@@ -56,7 +50,6 @@ function Project(props) {
     );
 }
 Project.propTypes = {
-    xs: PropTypes.number,
     ShortDescription: PropTypes.string,
     FullDescription: PropTypes.string,
     LicenseUrl: PropTypes.string,

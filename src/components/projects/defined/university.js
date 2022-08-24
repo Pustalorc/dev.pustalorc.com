@@ -5,12 +5,10 @@ import { renderToString } from "react-dom/server";
 
 export default function University() {
     return (
-        <Container>
-            <Container>
-                <Typography align="center" variant="h3" gutterBottom component="div">
-                    University
-                </Typography>
-            </Container>
+        <Container maxWidth="xl">
+            <Typography align="center" variant="h3" gutterBottom component="div">
+                University
+            </Typography>
             <Grid container direction="row" justifyContent="center" rowSpacing={3}>
                 <Project
                     Title="A Slack Chatbot"

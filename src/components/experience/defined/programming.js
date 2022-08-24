@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 function ProgrammingFormat(props) {
     return (
         <ExperienceFormat
-            xs={3}
             variant="body1"
             Title={props.Name}
             StartYear={props.YoE + " Year(s) of Experience"}
@@ -20,12 +19,10 @@ ProgrammingFormat.propTypes = {
 
 export default function Programming() {
     return (
-        <Container>
-            <Container>
-                <Typography align="center" variant="h4" gutterBottom component="div">
-                    Skills
-                </Typography>
-            </Container>
+        <Container maxWidth="xl">
+            <Typography align="center" variant="h4" gutterBottom component="div">
+                Skills
+            </Typography>
             <Grid container direction="row" justifyContent="center" rowSpacing={3}>
                 <ProgrammingFormat
                     Name="C# / .NET"

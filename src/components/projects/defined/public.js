@@ -5,11 +5,11 @@ import Project from "../project";
 
 export default function Public() {
     return (
-        <Container>
+        <Container maxWidth="xl">
             <Typography align="center" variant="h3" gutterBottom component="div">
                 Open Source
             </Typography>
-            <Grid container direction="row" justifyContent="center" rowSpacing={3}>
+            <Grid container direction="row" justifyContent="space-evenly" rowSpacing={3}>
                 <Project
                     TitleUrl="https://github.com/Pustalorc/BaseClustering"
                     Title="Base Clustering"

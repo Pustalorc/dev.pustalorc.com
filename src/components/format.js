@@ -16,7 +16,7 @@ function PageFormat(props) {
                 <Header title={props.title}/>
                 <br/>
 
-                <Container maxWidth="lg" sx={{ display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "column", minHeight: "calc(100vh - 176px)" }}>
+                <Container maxWidth={false} sx={{ display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "column", minHeight: "calc(100vh - 176px)" }}>
                     {props.children}
                 </Container>
 

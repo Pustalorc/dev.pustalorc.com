@@ -53,13 +53,8 @@ function getPositionTitles(titles, customAlignment) {
 }
 
 function ExperienceFormat(props) {
-    let customXs = 4;
     let customAlignment = "center";
     let customVariant = "h5";
-
-    if (props.xs) {
-        customXs = props.xs;
-    }
 
     if (props.align) {
         customAlignment = props.align;
@@ -70,7 +65,7 @@ function ExperienceFormat(props) {
     }
 
     return (
-        <Grid item xs={customXs}>
+        <Grid item>
             <Container maxWidth="sm">
                 <Typography align={customAlignment} variant={customVariant} gutterBottom component="div">
                     {props.Title}
@@ -83,7 +78,6 @@ function ExperienceFormat(props) {
     );
 }
 ExperienceFormat.propTypes = {
-    xs: PropTypes.number,
     align: PropTypes.string,
     variant: PropTypes.string,
     Title: PropTypes.string,

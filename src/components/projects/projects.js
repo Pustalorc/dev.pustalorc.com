@@ -7,7 +7,7 @@ import { Container } from "@mui/material";
 
 export default function Projects() {
     return (
-        <Container>
+        <Container maxWidth="xl">
             <Public />
             <Divider />
             <Private />
