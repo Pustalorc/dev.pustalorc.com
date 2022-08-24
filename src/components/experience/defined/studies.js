@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Container, Typography, Grid } from '@mui/material';
-import ExperienceFormat from '../experienceFormat';
+import * as React from "react";
+import { Container, Typography, Grid } from "@mui/material";
+import ExperienceFormat from "../experienceFormat";
 
 export default function Studies() {
     return (
@@ -20,5 +20,5 @@ export default function Studies() {
                 />
             </Grid>
         </Container>
-    )
+    );
 }

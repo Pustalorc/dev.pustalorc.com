@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { Container } from '@mui/material';
+import * as React from "react";
+import { Container } from "@mui/material";
 import Divider from "../common/divider";
-import Work from "./defined/work"
-import Studies from "./defined/studies"
-import Programming from "./defined/programming"
-import Languages from "./defined/languages"
+import Work from "./defined/work";
+import Studies from "./defined/studies";
+import Programming from "./defined/programming";
+import Languages from "./defined/languages";
 
 export default function Experience() {
     return (
@@ -17,5 +17,5 @@ export default function Experience() {
             <Divider />
             <Languages />
         </Container>
-    )
+    );
 }

@@ -1,6 +1,7 @@
-import * as React from 'react';
-import { Container, Typography, Grid } from '@mui/material';
-import ExperienceFormat from '../experienceFormat';
+import * as React from "react";
+import { Container, Typography, Grid } from "@mui/material";
+import ExperienceFormat from "../experienceFormat";
+import PropTypes from "prop-types";
 
 function ProgrammingFormat(props) {
     return (
@@ -11,8 +12,13 @@ function ProgrammingFormat(props) {
             StartYear={props.StartYear}
             EndYear={props.EndYear}
         />
-    )
+    );
 }
+ProgrammingFormat.propTypes = {
+    Title: PropTypes.string,
+    StartYear: PropTypes.string,
+    EndYear: PropTypes.string
+};
 
 export default function Programming() {
     return (
@@ -59,5 +65,5 @@ export default function Programming() {
                 />
             </Grid>
         </Container>
-    )
+    );
 }

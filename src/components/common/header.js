@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { AppBar, Grid, Toolbar, Container, Button } from '@mui/material';
-import { CleanLink } from '../../utils';
+import * as React from "react";
+import { AppBar, Grid, Toolbar, Container, Button } from "@mui/material";
+import { CleanLink } from "../../utils";
 
-const pages = ['projects', 'experience'];
+const pages = [ "projects", "experience" ];
 
-export default function Header(props) {
+export default function Header() {
     return (
         <AppBar position="static">
             <Container maxWidth="lg">
@@ -15,14 +15,14 @@ export default function Header(props) {
                         <Grid item xs={6}>
                             <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }} direction="row" justifyContent="center">
                                 <Grid item>
-                                    <Button href="/" sx={{ color: 'white' }}>
+                                    <Button href="/" sx={{ color: "white" }}>
                                         Home Page
                                     </Button>
                                 </Grid>
                                 {pages.map((page) => (
                                     <Grid item key={page}>
                                         <CleanLink to={"/" + page}>
-                                            <Button sx={{ color: 'white' }}>
+                                            <Button sx={{ color: "white" }}>
                                                 {page}
                                             </Button>
                                         </CleanLink>
@@ -36,5 +36,5 @@ export default function Header(props) {
                 </Toolbar>
             </Container>
         </AppBar>
-    )
-};
+    );
+}

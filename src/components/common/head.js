@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import * as React from "react";
+import { Helmet } from "react-helmet";
 
 export default function Head() {
     return (
@@ -7,5 +7,5 @@ export default function Head() {
             <meta name="description" content="Virtual Curriculum Vitae for Vicente 'Pustalorc' Pastor"/>
             <title>Virtual Curriculum Vitae</title>
         </Helmet>
-    )
-} 
+    );
+}

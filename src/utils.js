@@ -1,20 +1,20 @@
 import { createTheme } from "@mui/material/styles";
 import { makeStyles } from "@mui/styles";
-import { Link } from 'gatsby';
-import styled from 'styled-components';
+import { Link } from "gatsby";
+import styled from "styled-components";
 
 const centerJustified = {
     textAlign: "justify",
     textAlignLast: "center",
-}
+};
 
 const lightDivider = {
     borderColor: "rgba(255, 255, 255, 0.12)",
-}
+};
 
 const themeDark = createTheme({
     palette: {
-        mode: 'dark',
+        mode: "dark",
         background: {
             default: "#222222"
         },
@@ -26,7 +26,7 @@ const themeDark = createTheme({
 
 const useStyles = makeStyles({
     content: {
-          justifyContent: "center"
+        justifyContent: "center"
     }
 });
 
@@ -38,4 +38,4 @@ const CleanLink = styled(Link)`
     }
 `;
 
-export {centerJustified, lightDivider, themeDark, useStyles, CleanLink}
+export {centerJustified, lightDivider, themeDark, useStyles, CleanLink};

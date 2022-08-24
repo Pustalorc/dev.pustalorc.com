@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Divider as MuiDivider } from '@mui/material'
-import { lightDivider } from '../../utils';
+import * as React from "react";
+import { Divider as MuiDivider } from "@mui/material";
+import { lightDivider } from "../../utils";
 
 export default function Divider() {
     return (
@@ -9,5 +9,5 @@ export default function Divider() {
             <MuiDivider style={lightDivider} />
             <br/>
         </div>
-    )    
+    );
 }

@@ -1,6 +1,7 @@
-import * as React from 'react';
-import { Container, Typography, Grid } from '@mui/material';
-import ExperienceFormat from '../experienceFormat';
+import * as React from "react";
+import { Container, Typography, Grid } from "@mui/material";
+import ExperienceFormat from "../experienceFormat";
+import PropTypes from "prop-types";
 
 function LanguageFormat(props) {
     return (
@@ -10,8 +11,13 @@ function LanguageFormat(props) {
             StartYear={props.YearAcchieved}
             PositionTitle={props.Certification}
         />
-    )
+    );
 }
+LanguageFormat.propTypes = {
+    Language: PropTypes.string,
+    YearAcchieved: PropTypes.string,
+    Certification: PropTypes.string
+};
 
 export default function Languages() {
     return (
@@ -37,5 +43,5 @@ export default function Languages() {
                 />
             </Grid>
         </Container>
-    )
+    );
 }

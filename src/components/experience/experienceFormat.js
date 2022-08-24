@@ -1,66 +1,73 @@
-import * as React from 'react';
-import { Grid, Container, Typography } from '@mui/material'
+import * as React from "react";
+import { Grid, Container, Typography } from "@mui/material";
+import PropTypes from "prop-types";
 
 function getYoE(props, customAlignment) {
     if (!props.YoE) {
-        return
+        return undefined;
     }
 
     return (
         <Typography align={customAlignment} variant="body2" gutterBottom>
             Years of Experience: {props.YoE}
         </Typography>
-    )
+    );
 }
 
 function getYearRange(props, customAlignment) {
-    if (!props.StartYear)
-        return
-    
-    if (!props.EndYear)
+    if (!props.StartYear) {
+        return undefined;
+    }
+
+    if (!props.EndYear) {
         return (
             <Typography align={customAlignment} variant="body2" gutterBottom>
                 {props.StartYear}
             </Typography>
-        )
+        );
+    }
 
     return (
         <Typography align={customAlignment} variant="body2" gutterBottom>
             {props.StartYear} - {props.EndYear}
         </Typography>
-    )
+    );
 }
 
 function getPositionTitles(titles, customAlignment) {
-    if (!Array.isArray(titles))
+    if (!Array.isArray(titles)) {
         return (
             <Typography align={customAlignment} variant="body2" gutterBottom>
-               {titles}
+                {titles}
             </Typography>
-        )
-    
+        );
+    }
+
     return titles.map((title) => {
         return (
             <Typography key={title} align={customAlignment} variant="body2" gutterBottom>
-               {title}
+                {title}
             </Typography>
-        )
-    })
+        );
+    });
 }
 
-export default function ExperienceFormat(props) {
+function ExperienceFormat(props) {
     let customXs = 4;
-    let customAlignment = "center"
-    let customVariant = "h5"
+    let customAlignment = "center";
+    let customVariant = "h5";
 
-    if (props.xs)
-        customXs = props.xs
+    if (props.xs) {
+        customXs = props.xs;
+    }
 
-    if (props.align)
-        customAlignment = props.align
+    if (props.align) {
+        customAlignment = props.align;
+    }
 
-    if (props.variant)
-        customVariant = props.variant
+    if (props.variant) {
+        customVariant = props.variant;
+    }
 
     return (
         <Grid item xs={customXs}>
@@ -73,5 +80,14 @@ export default function ExperienceFormat(props) {
                 {getYoE(props, customAlignment)}
             </Container>
         </Grid>
-    )
+    );
 }
+ExperienceFormat.propTypes = {
+    xs: PropTypes.number,
+    align: PropTypes.string,
+    variant: PropTypes.string,
+    Title: PropTypes.string,
+    PositionTitle: PropTypes.string
+};
+
+export default ExperienceFormat;

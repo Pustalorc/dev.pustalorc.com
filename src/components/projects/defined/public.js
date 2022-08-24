@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { renderToString } from 'react-dom/server';
-import { Container, Grid, Typography, Link } from '@mui/material'
-import Project from '../project'
+import * as React from "react";
+import { renderToString } from "react-dom/server";
+import { Container, Grid, Typography, Link } from "@mui/material";
+import Project from "../project";
 
 export default function Public() {
     return (
@@ -34,7 +34,7 @@ export default function Public() {
                     ShortDescription="A NuGet library that provides abstractions for any database connections to reduce copy pasted code."
                     FullDescription={
                         "This project was split from MySqlConnectorWrapper as to provide a fully globally compatible wrapper for any database connection libraries that inherit from ADO.NET's " +
-                        renderToString(<Link href="https://docs.microsoft.com/en-us/dotnet/api/system.data.common.dbconnection" underline="hover" color="#50f0ff">DbConnection class</Link>) + 
+                        renderToString(<Link href="https://docs.microsoft.com/en-us/dotnet/api/system.data.common.dbconnection" underline="hover" color="#50f0ff">DbConnection class</Link>) +
                         ". It currently supports running all queries asynchronously, running queries in parallel, automatic rollbacks on transactions in the case of an issue, and a conversion from an open reader to in memory structured data of a reader's result."
                     }
                 />
@@ -57,8 +57,9 @@ export default function Public() {
                     LicenseUrl="https://github.com/openmod/openmod/blob/main/LICENSE"
                     LicenseCode="MIT/Custom"
                     ShortDescription="Contributed to the OpenMod project."
-                    FullDescription="OpenMod, as best described by the creators: 'OpenMod is a plugin framework for .NET. It supports authorization, plugin configurations, internalization, command handling and much more. OpenMod can be used for games, bot frameworks, web servers or anything else.' My contributions are buildable abstractions, and their implementation for the Unturned OpenMod framework."                />
-                <Project 
+                    FullDescription="OpenMod, as best described by the creators: 'OpenMod is a plugin framework for .NET. It supports authorization, plugin configurations, internalization, command handling and much more. OpenMod can be used for games, bot frameworks, web servers or anything else.' My contributions are buildable abstractions, and their implementation for the Unturned OpenMod framework."
+                />
+                <Project
                     TitleUrl="https://github.com/Pustalorc/UnturnedServerManager"
                     Title="Unturned Server Manager"
                     LicenseUrl="https://github.com/Pustalorc/UnturnedServerManager/blob/master/LICENSE.md"
@@ -68,5 +69,5 @@ export default function Public() {
                 />
             </Grid>
         </Container>
-    )
+    );
 }

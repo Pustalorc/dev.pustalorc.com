@@ -1,6 +1,7 @@
-import * as React from 'react';
-import { Container, Typography, Grid } from '@mui/material';
-import ExperienceFormat from '../experienceFormat';
+import * as React from "react";
+import { Container, Typography, Grid } from "@mui/material";
+import ExperienceFormat from "../experienceFormat";
+import PropTypes from "prop-types";
 
 function WorkFormat(props) {
     return (
@@ -11,8 +12,14 @@ function WorkFormat(props) {
             EndYear={props.EndYear}
             PositionTitle={props.PositionTitle}
         />
-    )
+    );
 }
+WorkFormat.propTypes = {
+    Company: PropTypes.string,
+    StartYear: PropTypes.string,
+    EndYear: PropTypes.string,
+    PositionTitle: PropTypes.string
+};
 
 export default function Work() {
     return (
@@ -37,5 +44,5 @@ export default function Work() {
                 />
             </Grid>
         </Container>
-    )
+    );
 }

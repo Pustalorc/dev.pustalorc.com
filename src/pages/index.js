@@ -1,7 +1,7 @@
-import * as React from 'react';
+import * as React from "react";
 import PageFormat from "../components/format";
-import { Grid, Container } from '@mui/material';
-import { CleanLink } from '../utils';
+import { Grid, Container } from "@mui/material";
+import { CleanLink } from "../utils";
 
 export default function IndexPage() {
     return (
@@ -19,5 +19,5 @@ export default function IndexPage() {
                 </Grid>
             </Grid>
         </PageFormat>
-    )
+    );
 }
