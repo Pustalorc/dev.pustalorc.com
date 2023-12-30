@@ -1,9 +1,12 @@
 {
   "name": "dev.pustalorc.com",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
-  "description": "Portfolio website",
-  "author": "Pustalorc",
+  "description": "Portfolio Website",
+  "author": "Vicente \"Pustalorc\" Pastor",
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -14,20 +17,15 @@
     "lint-fix": "npx eslint --fix src/"
   },
   "dependencies": {
-    "@emotion/react": "latest",
-    "@emotion/server": "latest",
-    "@emotion/styled": "latest",
-    "@mui/icons-material": "latest",
-    "@mui/material": "latest",
-    "@mui/styles": "latest",
-    "gatsby": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-helmet": "latest",
-    "styled-components": "latest"
-  },
-  "devDependencies": {
-    "eslint": "latest",
-    "eslint-plugin-react": "latest"
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.2",
+    "@mui/material": "^5.15.2",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "gatsby": "^5.13.1",
+    "gatsby-plugin-provide-react": "^1.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0"
   }
 }
