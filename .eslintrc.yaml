@@ -1,0 +1,214 @@
+env:
+  browser: true
+  es2021: true
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - plugin:react/jsx-runtime
+overrides: []
+parserOptions:
+  ecmaVersion: latest
+  sourceType: module
+  ecmaFeatures:
+    - jsx
+rules:
+  indent:
+    - error
+    - 2
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - single
+  semi:
+    - error
+    - always
+    - omitLastInOneLineBlock: true
+  no-multiple-empty-lines:
+    - error
+    - max: 2
+      maxEOF: 1
+  max-len:
+    - 2
+    - 120
+    - 4
+    - ignoreUrls: true
+  curly:
+    - error
+  comma-dangle:
+    - error
+    - never
+  no-throw-literal: 'off'
+  no-return-await: warn
+  consistent-return: warn
+  max-lines-per-function:
+    - error
+    - 250
+  max-params:
+    - error
+    - 7
+  no-unsafe-finally: 'off'
+  no-undef: 'off'
+  no-unused-vars:
+    - warn
+  no-duplicate-imports:
+    - error
+    - includeExports: true
+  brace-style:
+    - error
+    - stroustrup
+    - allowSingleLine: true
+  no-self-compare:
+    - error
+  no-unmodified-loop-condition:
+    - warn
+  no-unreachable-loop:
+    - warn
+  no-use-before-define:
+    - error
+  camelcase:
+    - error
+  dot-notation:
+    - error
+  func-name-matching:
+    - warn
+  func-names:
+    - warn
+  func-style:
+    - warn
+    - declaration
+    - allowArrowFunctions: true
+  no-confusing-arrow:
+    - warn
+  no-console:
+    - warn
+  no-else-return:
+    - warn
+  no-extend-native:
+    - error
+  no-extra-bind:
+    - warn
+  no-floating-decimal:
+    - warn
+  no-implicit-globals:
+    - error
+  no-implied-eval:
+    - error
+  no-invalid-this:
+    - warn
+  no-lonely-if:
+    - warn
+  no-var:
+    - warn
+  prefer-const:
+    - warn
+  require-await:
+    - warn
+  spaced-comment:
+    - warn
+  array-bracket-spacing:
+    - warn
+    - always
+    - singleValue: true
+      arraysInArrays: true
+  array-bracket-newline:
+    - error
+    - consistent
+  array-element-newline:
+    - error
+    - consistent
+  arrow-parens:
+    - error
+    - always
+  arrow-spacing:
+    - error
+  block-spacing:
+    - error
+    - always
+  comma-spacing:
+    - error
+  comma-style:
+    - error
+  dot-location:
+    - error
+  func-call-spacing:
+    - error
+    - never
+  jsx-quotes:
+    - warn
+    - prefer-single
+  key-spacing:
+    - error
+  lines-between-class-members:
+    - warn
+  new-parens:
+    - error
+  no-trailing-spaces:
+    - warn
+  no-whitespace-before-property:
+    - warn
+  react/prop-types:
+    - warn
+  react/jsx-closing-tag-location:
+    - warn
+  react/jsx-closing-bracket-location:
+    - warn
+    - nonEmpty: after-props
+      selfClosing: line-aligned
+  react/jsx-curly-brace-presence:
+    - warn
+    - props: never
+      children: never
+      propElementValues: always
+  react/jsx-equals-spacing:
+    - error
+    - never
+  react/jsx-first-prop-new-line:
+    - warn
+    - multiline-multiprop
+  react/jsx-fragments:
+    - warn
+    - syntax
+  react/jsx-indent-props:
+    - warn
+    - 2
+  react/jsx-indent:
+    - warn
+    - 2
+  react/jsx-key:
+    - error
+    - warnOnDuplicates: true
+      checkKeyMustBeforeSpread: true
+      checkFragmentShorthand: true
+  react/jsx-max-props-per-line:
+    - warn
+    - maximum: 1
+  react/jsx-no-constructed-context-values:
+    - warn
+  react/jsx-no-duplicate-props:
+    - error
+  react/jsx-no-leaked-render:
+    - error
+  react/jsx-no-literals:
+    - warn
+    - noStrings: true
+  react/jsx-no-target-blank:
+    - error
+  react/jsx-no-undef:
+    - error
+  react/jsx-no-useless-fragment:
+    - warn
+  react/jsx-one-expression-per-line:
+    - warn
+    - allow: none
+  react/jsx-pascal-case:
+    - error
+  react/jsx-props-no-multi-spaces:
+    - warn
+  react/jsx-tag-spacing:
+    - warn
+    - closingSlash: never
+      beforeSelfClosing: always
+      afterOpening: never
+      beforeClosing: never

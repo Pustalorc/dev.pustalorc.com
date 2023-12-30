@@ -1,5 +1,9 @@
+# We don't want node_modules to be uploaded, it is way too heavy and unnecessary.
 node_modules/
+
+# Cache and public are used in temp development, which should not be uploaded.
 .cache/
 public/
 
+# Package lock is always created on npm install and serves a minor purpose that can be ignored for version control.
 package-lock.json

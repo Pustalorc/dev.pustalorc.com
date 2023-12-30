@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Virtual Curriculum Vitae",
-    siteUrl: "https://dev.pustalorc.com",
+    title: 'Virtual Curriculum Vitae',
+    siteUrl: 'https://dev.pustalorc.com'
   },
-  plugins: [],
+  plugins: ['gatsby-plugin-provide-react']
 };
