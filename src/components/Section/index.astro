@@ -1,0 +1,25 @@
+---
+export interface Props {
+  id?: string;
+  eyebrow?: string;
+  title?: string;
+  alternate?: boolean;
+  containerClass?: string;
+}
+
+const { id, eyebrow, title, alternate, containerClass } = Astro.props as Props;
+---
+
+<section id={id} class:list={['py-16 md:py-24', alternate ? 'bg-bg-900/60' : undefined]}>
+  <div class:list={['container flex flex-col gap-10', containerClass]}>
+    {
+      (eyebrow || title) && (
+        <div class="flex flex-col gap-2">
+          {eyebrow && <p class="prompt">{eyebrow}</p>}
+          {title && <h2 class="font-display text-3xl font-semibold md:text-4xl">{title}</h2>}
+        </div>
+      )
+    }
+    <slot />
+  </div>
+</section>

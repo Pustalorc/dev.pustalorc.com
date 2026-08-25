@@ -1,0 +1,35 @@
+---
+import Badge from '@components/Badge/index.astro';
+import { formatYearRange } from '@utils/dates';
+import { getStrings } from '@utils/i18n';
+
+export interface Props {
+  title: string;
+  subtitle: string;
+  startYear: number;
+  endYear: number | null;
+  description?: string;
+  isLast?: boolean;
+  tag?: string;
+}
+
+const { title, subtitle, startYear, endYear, description, isLast, tag } = Astro.props as Props;
+const strings = getStrings(Astro.currentLocale);
+const isCurrent = endYear === null;
+---
+
+<div class="relative flex gap-4 pb-8">
+  {!isLast && <span class="timeline-line" />}
+  <span class:list={['timeline-dot', isCurrent && 'timeline-dot-current']}></span>
+
+  <div class="flex flex-1 flex-col gap-1">
+    <div class="flex flex-wrap items-center gap-2">
+      <h3 class="font-display text-lg font-semibold">{title}</h3>
+      {isCurrent && <Badge class="text-accent border-accent">{strings.cards.current}</Badge>}
+      {tag && <Badge>{tag}</Badge>}
+    </div>
+    <p class="text-text-muted">{subtitle}</p>
+    <p class="mono text-accent-2 text-xs">{formatYearRange(startYear, endYear)}</p>
+    {description && <p class="text-text-muted mt-1 text-sm">{description}</p>}
+  </div>
+</div>

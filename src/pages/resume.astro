@@ -1,0 +1,73 @@
+---
+import ExperienceTimelineItem from '@components/Cards/ExperienceTimelineItem.astro';
+import LanguageCard from '@components/Cards/LanguageCard.astro';
+import SkillCategory from '@components/Cards/SkillCategory.astro';
+import TimelineItem from '@components/Cards/TimelineItem.astro';
+import Section from '@components/Section/index.astro';
+import { getEducation } from '@data/education';
+import { getExperience } from '@data/experience';
+import { getLanguages } from '@data/languages';
+import { getProfile } from '@data/profile';
+import { getSkillCategories } from '@data/skills';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { getStrings } from '@utils/i18n';
+
+const profile = await getProfile();
+const experience = await getExperience();
+const education = await getEducation();
+const skillCategories = await getSkillCategories();
+const languages = await getLanguages();
+const strings = getStrings(Astro.currentLocale);
+---
+
+<BaseLayout
+  title={`${strings.resume.pageTitle} - ${profile.name}`}
+  description={strings.resume.pageDescription(profile.name)}
+>
+  <Section eyebrow={strings.resume.careerEyebrow} title={strings.resume.careerTitle}>
+    <div class="flex flex-col">
+      {
+        experience.map((job, index) => (
+          <ExperienceTimelineItem
+            job={job}
+            isLast={index === experience.length - 1 && education.length === 0}
+          />
+        ))
+      }
+      {
+        education.map((entry, index) => (
+          <TimelineItem
+            title={entry.degree}
+            subtitle={entry.institution}
+            startYear={entry.startYear}
+            endYear={entry.endYear}
+            tag={strings.resume.educationTag}
+            isLast={index === education.length - 1}
+          />
+        ))
+      }
+    </div>
+  </Section>
+
+  <Section eyebrow={strings.resume.stackEyebrow} title={strings.resume.stackTitle} alternate>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      {skillCategories.map((category) => <SkillCategory category={category} />)}
+    </div>
+    <div class="mono text-text-muted flex flex-wrap items-center gap-6 text-xs">
+      <div class="flex items-center gap-2">
+        <span class="bg-accent h-2 w-2 rounded-full"></span>
+        <span>{strings.resume.activeLegend}</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="bg-text-muted h-2 w-2 rounded-full"></span>
+        <span>{strings.resume.pastLegend}</span>
+      </div>
+    </div>
+  </Section>
+
+  <Section eyebrow={strings.resume.languagesEyebrow} title={strings.resume.languagesTitle}>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      {languages.map((language) => <LanguageCard language={language} />)}
+    </div>
+  </Section>
+</BaseLayout>

@@ -1,0 +1,55 @@
+---
+import Button from '@components/Button/index.astro';
+import ProjectCard from '@components/Cards/ProjectCard.astro';
+import Hero from '@components/Hero/index.astro';
+import Section from '@components/Section/index.astro';
+import { getLanguages } from '@data/languages';
+import internal from '@data/links/internal';
+import { getProfile } from '@data/profile';
+import { getFeaturedProjects, getProjectCount } from '@data/projects';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { getYearsSince } from '@utils/dates';
+import { getStrings } from '@utils/i18n';
+
+const profile = await getProfile();
+const featuredProjects = await getFeaturedProjects();
+const languages = await getLanguages();
+const strings = getStrings(Astro.currentLocale);
+
+const stats = [
+  { label: strings.home.yearsProgramming, value: `${getYearsSince(profile.codingSinceYear)}+` },
+  { label: strings.home.opensourceProjects, value: `${await getProjectCount()}` },
+  { label: strings.home.languagesSpoken, value: `${languages.length}` }
+];
+---
+
+<BaseLayout>
+  <Hero />
+
+  <Section eyebrow={strings.home.aboutEyebrow} title={strings.home.aboutTitle} alternate>
+    <div class="panel flex flex-col gap-6 p-8 md:flex-row md:items-center">
+      <p class="text-text-muted flex-1 text-lg leading-relaxed">
+        {profile.bioLong}
+      </p>
+      <div class="grid flex-none grid-cols-3 gap-6 md:w-72">
+        {
+          stats.map((stat) => (
+            <div class="flex flex-col items-center gap-1 text-center">
+              <span class="font-display text-accent text-3xl font-bold">{stat.value}</span>
+              <span class="text-text-muted mono text-xs uppercase tracking-wide">{stat.label}</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </Section>
+
+  <Section eyebrow={strings.home.featuredEyebrow} title={strings.home.featuredTitle}>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      {featuredProjects.map((project) => <ProjectCard project={project} />)}
+    </div>
+    <Button href={internal.projects} variant="secondary" class="w-fit">
+      {strings.home.viewAllProjects}
+    </Button>
+  </Section>
+</BaseLayout>

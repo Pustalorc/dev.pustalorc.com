@@ -1,0 +1,67 @@
+[
+  {
+    "category": "Foundations",
+    "skills": [
+      { "name": "Frontend Development", "usedRecently": true, "icon": "mingcute:layout-fill" },
+      { "name": "Backend Development", "usedRecently": true, "icon": "mingcute:server-fill" },
+      { "name": "Full-Stack Development", "usedRecently": true, "icon": "mingcute:layers-fill" },
+      { "name": "Functional Programming", "usedRecently": true, "icon": "mingcute:flash-fill" },
+      {
+        "name": "Object-Oriented Programming",
+        "usedRecently": true,
+        "icon": "mingcute:cube-fill"
+      },
+      { "name": "RESTful API Design", "usedRecently": true, "icon": "mingcute:link-fill" },
+      {
+        "name": "Identity & Access Management (SSO/OIDC)",
+        "usedRecently": true,
+        "icon": "simple-icons:keycloak"
+      },
+      { "name": "Microservices Architecture", "usedRecently": false, "icon": "mingcute:grid-fill" },
+      { "name": "Event-Driven Architecture", "usedRecently": false, "icon": "ion:pulse" }
+    ]
+  },
+  {
+    "category": "Languages & Frameworks",
+    "skills": [
+      { "name": "ReactJS", "usedRecently": true, "icon": "simple-icons:react" },
+      { "name": "PHP (Laravel)", "usedRecently": true, "icon": "simple-icons:php" },
+      { "name": "Go", "usedRecently": true, "icon": "simple-icons:go" },
+      { "name": "TypeScript", "usedRecently": true, "icon": "simple-icons:typescript" },
+      { "name": "C# / .NET", "usedRecently": true, "icon": "simple-icons:dotnet" },
+      { "name": "HTML", "usedRecently": true, "icon": "simple-icons:html5" },
+      { "name": "CSS", "usedRecently": true, "icon": "simple-icons:css3" },
+      { "name": "JavaScript", "usedRecently": true, "icon": "simple-icons:javascript" },
+      { "name": "Java", "usedRecently": false, "icon": "simple-icons:openjdk" },
+      { "name": "C / C++", "usedRecently": false, "icon": "simple-icons:cplusplus" },
+      { "name": "NodeJS", "usedRecently": false, "icon": "simple-icons:nodedotjs" },
+      { "name": "Python", "usedRecently": false, "icon": "simple-icons:python" },
+      { "name": "ExpressJS", "usedRecently": false, "icon": "simple-icons:express" },
+      { "name": "Solidity", "usedRecently": false, "icon": "simple-icons:solidity" }
+    ]
+  },
+  {
+    "category": "Cloud & DevOps",
+    "skills": [
+      { "name": "Docker", "usedRecently": true, "icon": "simple-icons:docker" },
+      { "name": "Ansible", "usedRecently": true, "icon": "simple-icons:ansible" },
+      { "name": "Kubernetes", "usedRecently": true, "icon": "simple-icons:kubernetes" },
+      { "name": "GitHub Actions", "usedRecently": true, "icon": "simple-icons:githubactions" },
+      { "name": "AWS", "usedRecently": true, "icon": "simple-icons:amazonwebservices" },
+      { "name": "Terraform", "usedRecently": false, "icon": "simple-icons:terraform" },
+      { "name": "HashiCorp Vault", "usedRecently": false, "icon": "simple-icons:vault" },
+      { "name": "Azure", "usedRecently": false, "icon": "simple-icons:microsoftazure" }
+    ]
+  },
+  {
+    "category": "Data Stores",
+    "skills": [
+      { "name": "MySQL", "usedRecently": true, "icon": "simple-icons:mysql" },
+      { "name": "MariaDB", "usedRecently": true, "icon": "simple-icons:mariadb" },
+      { "name": "PostgreSQL", "usedRecently": false, "icon": "simple-icons:postgresql" },
+      { "name": "MongoDB", "usedRecently": false, "icon": "simple-icons:mongodb" },
+      { "name": "SQL Server", "usedRecently": false, "icon": "simple-icons:microsoftsqlserver" },
+      { "name": "LiteDB", "usedRecently": false, "icon": "mingcute:storage-fill" }
+    ]
+  }
+]

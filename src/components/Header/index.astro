@@ -1,0 +1,86 @@
+---
+import internal from '@data/links/internal';
+import { getProfile } from '@data/profile';
+import { getStrings } from '@utils/i18n';
+import { Icon } from 'astro-icon/components';
+
+const profile = await getProfile();
+const strings = getStrings(Astro.currentLocale);
+
+const navLinks = [
+  { label: strings.nav.home, href: internal.home },
+  { label: strings.nav.resume, href: internal.resume },
+  { label: strings.nav.projects, href: internal.projects }
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="border-border bg-bg-950/80 sticky top-0 z-20 border-b backdrop-blur">
+  <div class="container flex items-center justify-between py-4">
+    <a href={internal.home} class="mono text-accent flex items-center gap-2 text-lg font-semibold">
+      <img src="favicon.png" alt="logo" class="h-8 w-8" />
+      {profile.alias}
+    </a>
+
+    <nav class="hidden items-center gap-6 md:flex">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'mono text-sm transition-colors duration-200',
+              currentPath === link.href ? 'text-accent' : 'text-text-muted hover:text-text'
+            ]}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <button
+      type="button"
+      id="nav-toggle"
+      aria-label={strings.nav.toggleMenu}
+      aria-expanded="false"
+      class="border-border text-text flex h-9 w-9 items-center justify-center rounded-md border md:hidden"
+    >
+      <Icon name="mingcute:menu-line" class="h-5 w-5" />
+    </button>
+  </div>
+
+  <nav
+    id="mobile-nav"
+    class="border-border bg-bg-950 absolute inset-x-0 top-full hidden flex-col border-t shadow-lg md:hidden"
+  >
+    <div class="container flex flex-col gap-1 py-3">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'mono rounded-md px-2 py-2 text-sm transition-colors duration-200',
+              currentPath === link.href
+                ? 'text-accent bg-panel'
+                : 'text-text-muted hover:bg-panel hover:text-text'
+            ]}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('#nav-toggle');
+  const mobileNav = document.querySelector<HTMLElement>('#mobile-nav');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = mobileNav?.classList.toggle('flex');
+    mobileNav?.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+</script>

@@ -1,0 +1,71 @@
+---
+import ProjectCard from '@components/Cards/ProjectCard.astro';
+import Section from '@components/Section/index.astro';
+import { getProfile } from '@data/profile';
+import { getProjectCategories } from '@data/projects';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { getStrings } from '@utils/i18n';
+
+const profile = await getProfile();
+const categories = await getProjectCategories();
+const strings = getStrings(Astro.currentLocale);
+---
+
+<BaseLayout
+  title={`${strings.projects.pageTitle} - ${profile.name}`}
+  description={strings.projects.pageDescription(profile.name)}
+>
+  <Section eyebrow={strings.projects.portfolioEyebrow} title={strings.projects.portfolioTitle}>
+    <div class="flex flex-wrap gap-2" id="project-filters">
+      <button type="button" class="tag filter-active" data-filter="all">
+        {strings.projects.allFilter}
+      </button>
+      {
+        categories.map((category) => (
+          <button type="button" class="tag" data-filter={category.slug}>
+            {category.label}
+          </button>
+        ))
+      }
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2" id="project-grid">
+      {
+        categories.map((category) =>
+          category.projects.map((project) => (
+            <div data-category={category.slug}>
+              <ProjectCard project={project} />
+            </div>
+          ))
+        )
+      }
+    </div>
+  </Section>
+</BaseLayout>
+
+<style>
+  #project-filters button.filter-active {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+</style>
+
+<script>
+  const filterButtons = document.querySelectorAll<HTMLButtonElement>('#project-filters button');
+  const projectCards = document.querySelectorAll<HTMLElement>('#project-grid [data-category]');
+
+  for (const button of filterButtons) {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+
+      for (const otherButton of filterButtons) {
+        otherButton.classList.toggle('filter-active', otherButton === button);
+      }
+
+      for (const card of projectCards) {
+        const matches = filter === 'all' || card.dataset.category === filter;
+        card.classList.toggle('hidden', !matches);
+      }
+    });
+  }
+</script>

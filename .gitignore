@@ -1,9 +1,25 @@
-# We don't want node_modules to be uploaded, it is way too heavy and unnecessary.
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
 node_modules/
 
-# Cache and public are used in temp development, which should not be uploaded.
-.cache/
-public/
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Package lock is always created on npm install and serves a minor purpose that can be ignored for version control.
-package-lock.json
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# IDE specific files
+.vscode/
+.idea/

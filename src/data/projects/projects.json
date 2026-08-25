@@ -1,0 +1,157 @@
+[
+  {
+    "slug": "my-projects",
+    "label": "My Projects",
+    "projects": [
+      {
+        "name": "DbConnection Wrapper",
+        "href": "https://github.com/Pustalorc/DbConnectionWrapper",
+        "license": {
+          "id": "MIT",
+          "href": "https://github.com/Pustalorc/DbConnectionWrapper/blob/master/LICENSE.md"
+        },
+        "summary": "A NuGet library that provides abstractions for any ADO.NET database connection to reduce boilerplate.",
+        "full": "This project was split from MySqlConnectorWrapper as to provide a fully globally compatible wrapper for any database connection libraries that inherit from ADO.NET's DbConnection class. It currently supports running all queries asynchronously, running queries in parallel, automatic rollbacks on transactions in the case of an issue, and a conversion from an open reader to in memory structured data of a reader's result.",
+        "featured": true
+      },
+      {
+        "name": "Base Clustering",
+        "href": "https://github.com/Pustalorc/BaseClustering",
+        "license": {
+          "id": "LGPL-3.0",
+          "href": "https://github.com/Pustalorc/BaseClustering/blob/master/LICENSE.md"
+        },
+        "summary": "An Unturned Plugin that groups up barricades & structures around the map to define a player built base.",
+        "full": "This project was meant to provide the ability to define, use, interact, and modify as one wants a player built base within the game 'Unturned'. It uses primitive clustering methods, as none of the objects are linked or related, so all of them have to be investigated.",
+        "featured": true
+      },
+      {
+        "name": "Logging Library",
+        "href": "https://github.com/Pustalorc/Logging-Library",
+        "license": {
+          "id": "MIT",
+          "href": "https://github.com/Pustalorc/Logging-Library/blob/main/LICENSE.md"
+        },
+        "summary": "A custom C#/.NET logging library that supports static calling and multiple log targets with pipes.",
+        "full": "This project was made due to the requirements from Log4Net and other logging libraries to use dependency injection with services, which is not available within Unturned or RocketMod. The library allows for full customization of logging capabilities, including multiple log targets (console, file, void, and can be extended) and piping logs to multiple targets at once.",
+        "featured": true
+      },
+      {
+        "name": "MySqlConnectorWrapper",
+        "href": "https://github.com/Pustalorc/MySqlConnectorWrapper",
+        "license": {
+          "id": "MIT",
+          "href": "https://github.com/Pustalorc/MySqlConnectorWrapper/blob/master/LICENSE.md"
+        },
+        "summary": "A NuGet library that wraps both MySql.Data (Connector/NET) and MySqlConnector to remove duplicate boilerplate.",
+        "full": "This library reduces the duplicate code needed to interact with either of .NET's two main MySQL connector packages, building on top of DbConnectionWrapper for the underlying ADO.NET abstractions. It's used across most of my other .NET projects that need a MySQL connection.",
+        "featured": false
+      },
+      {
+        "name": "Unturned Server Manager",
+        "href": "https://github.com/Pustalorc/UnturnedServerManager",
+        "license": {
+          "id": "GPL-3.0",
+          "href": "https://github.com/Pustalorc/UnturnedServerManager/blob/master/LICENSE.md"
+        },
+        "summary": "A lightweight Windows application to make creating, running, and modifying Unturned servers a simple user experience.",
+        "full": "This project is one of my first C#/.NET projects and I have used it to show my learning progress with .NET, as well as with programming in general. The program still functions as intended, but might have some slight issues, as it is currently unmaintained.",
+        "featured": false
+      },
+      {
+        "name": "RocketMod Commands Extended",
+        "href": "https://github.com/Pustalorc/RocketModCommandsExtended",
+        "license": {
+          "id": "LGPL-3.0",
+          "href": "https://github.com/Pustalorc/RocketModCommandsExtended/blob/master/LICENSE.md"
+        },
+        "summary": "A NuGet library that is meant to provide abstractions to improve and extend RocketMod's commands.",
+        "full": "This project is made to standarize commands, as well as make them a lot easier to work with. It brings translations built into the commands themselves, multithreading and asynchronous support, and automatic parsing of commands into them. This allows a developer to significantly speed up development of commands, as they no longer have to write multiple if statements and custom checks for the command arguments, the translations, or if their code needs to run on a separate thread.",
+        "featured": false
+      },
+      {
+        "name": "AsyncTaskDispatcher",
+        "href": "https://github.com/Pustalorc/AsyncTaskDispatcher",
+        "license": {
+          "id": "LGPL-3.0",
+          "href": "https://github.com/Pustalorc/AsyncTaskDispatcher/blob/main/LICENSE.md"
+        },
+        "summary": "An Unturned Plugin to allow developers to queue asynchronous tasks on a separate thread, like RocketMod's TaskDispatcher.",
+        "full": "This plugin mirrors RocketMod's own TaskDispatcher, but lets developers queue asynchronous work onto a separate thread instead of the main thread, with configurable delays for empty or not-yet-ready queues.",
+        "featured": false
+      },
+      {
+        "name": "Async Threading Utils",
+        "href": "https://github.com/Pustalorc/AsyncThreadingUtils",
+        "license": {
+          "id": "MIT",
+          "href": "https://github.com/Pustalorc/AsyncThreadingUtils/blob/main/LICENSE.md"
+        },
+        "summary": "A .NET library that adds a BackgroundWorker and TaskQueue with Async support.",
+        "full": ".NET provides a BackgroundWorker to work on a separate thread but with non async code. There was a need for async support whilst still working on a separate thread without needing to run Task.Run or similar, so this was developed. Additionally, a TaskQueue which uses the BackgroundWorker was added so one can queue a lot of asynchronous tasks and execute them sequentally.",
+        "featured": false
+      },
+      {
+        "name": "RocketMod Services",
+        "href": "https://github.com/Pustalorc/RocketModServices",
+        "license": {
+          "id": "MIT",
+          "href": "https://github.com/Pustalorc/RocketModServices/blob/main/LICENSE.md"
+        },
+        "summary": "RocketMod Service System, with an event bus included. Fully static and meant as a library.",
+        "full": "A small static service-locator library for RocketMod, with a built-in event bus, letting plugins register and retrieve shared services without tight coupling between plugins.",
+        "featured": false
+      },
+      {
+        "name": "Frequency Cache",
+        "href": "https://github.com/Pustalorc/FrequencyCache",
+        "license": {
+          "id": "MIT",
+          "href": "https://github.com/Pustalorc/FrequencyCache/blob/master/LICENSE.md"
+        },
+        "summary": "Cache system with focus on keeping frequently used elements.",
+        "full": "A lightweight in-memory cache library whose eviction strategy favours elements that are both frequently and recently used, aiming for better hit rates than a plain LRU cache with minimal performance overhead.",
+        "featured": false
+      },
+      {
+        "name": "Buildable Abstractions",
+        "href": "https://github.com/Pustalorc/BuildableAbstractions",
+        "license": {
+          "id": "LGPL-3.0",
+          "href": "https://github.com/Pustalorc/BuildableAbstractions/blob/master/LICENSE.md"
+        },
+        "summary": "Buildable Abstractions library for Unturned, with some commands included for plugin functionality.",
+        "full": "A library that abstracts every buildable (barricade and structure) in Unturned behind a single consistent API, including a sample plugin with commands to find and remove buildables by filter. The abstraction layer here became the basis for the buildable events and grouping optimizations I later upstreamed into OpenMod.",
+        "featured": false
+      }
+    ]
+  },
+  {
+    "slug": "contributions",
+    "label": "Open Source Contributions",
+    "projects": [
+      {
+        "name": "OpenMod",
+        "href": "https://github.com/openmod/openmod",
+        "license": {
+          "id": "MIT/Custom",
+          "href": "https://github.com/openmod/openmod/blob/main/LICENSE"
+        },
+        "summary": "Contributed to the OpenMod project.",
+        "full": "OpenMod is best described by the creators: 'OpenMod is a plugin framework for .NET. It supports authorization, plugin configurations, internalization, command handling and much more. OpenMod can be used for games, bot frameworks, web servers or anything else.' I landed five merged pull requests: the initial abstraction of buildables for Unturned, universal buildable events, transform-related buildable events, a buildable-destruction bug fix, and a performance optimization for buildable grouping — building directly on the abstraction work from my own Buildable Abstractions library.",
+        "featured": false
+      },
+      {
+        "name": "Rocket.Unturned",
+        "href": "https://github.com/RocketMod/Rocket.Unturned",
+        "license": {
+          "id": "MIT",
+          "href": "https://github.com/RocketMod/Rocket.Unturned/blob/master/LICENSE"
+        },
+        "summary": "Contributed fixes to the original RocketMod implementation for Unturned.",
+        "full": "Rocket.Unturned is the Unturned 3 implementation of RocketMod, the .NET game server plugin framework that predates OpenMod. I contributed a fix restoring vanish and other player-manager functionality that had regressed on the legacy branch, and fixed a bug in UnturnedPlayerManager.Ban().",
+        "featured": false
+      }
+    ]
+  }
+]

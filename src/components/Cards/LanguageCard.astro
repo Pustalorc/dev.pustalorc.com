@@ -1,0 +1,22 @@
+---
+import type Language from '@models/Language';
+
+export interface Props {
+  language: Language;
+}
+
+const { language } = Astro.props as Props;
+---
+
+<div class="panel flex flex-col gap-1 p-6">
+  <h3 class="font-display text-lg font-semibold">{language.language}</h3>
+  <p class="text-accent-2 mono text-sm">{language.achievedScore}</p>
+  {
+    language.institution && (
+      <p class="text-text-muted text-xs">
+        {language.institution}
+        {language.yearAchieved && ` · ${language.yearAchieved}`}
+      </p>
+    )
+  }
+</div>

@@ -1,0 +1,57 @@
+---
+import external from '@data/links/external';
+import { formatFullDate } from '@utils/dates';
+import { getStrings } from '@utils/i18n';
+import { Icon } from 'astro-icon/components';
+
+export interface Props {
+  copyright: string;
+}
+
+const { copyright } = Astro.props as Props;
+const strings = getStrings(Astro.currentLocale);
+---
+
+<footer class="border-border border-t">
+  <div class="container grid grid-cols-1 gap-4 py-8 text-sm items-center md:grid-cols-3">
+    <p class="text-text-muted mono text-xs">{copyright}</p>
+
+    <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-center">
+      <a href={external.mailTo} class="link md:hidden">{strings.footer.emailMe}</a>
+      <a
+        href={external.mailTo}
+        aria-label={strings.footer.emailAria}
+        class="link social-button hidden md:flex"
+      >
+        <Icon name="mingcute:mail-fill" class="h-4 w-4" />
+      </a>
+      <a
+        href={external.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={strings.footer.githubAria}
+        class="link social-button"
+      >
+        <Icon name="simple-icons:github" class="hidden md:block h-4 w-4" />
+        <span class="md:hidden">{strings.footer.github}</span>
+      </a>
+    </div>
+
+    <p class="text-text-muted mono text-xs flex flex-col md:items-end">
+      <span>
+        {strings.footer.lastBuiltOn}
+        {formatFullDate(new Date())}
+      </span>
+      <span>
+        {strings.footer.withText}{' '}
+        <a href={external.astro} target="_blank" rel="noopener noreferrer" class="link"
+          >{strings.footer.astro}</a
+        >
+        {strings.footer.separator}{' '}
+        <a href={external.githubRepo} target="_blank" rel="noopener noreferrer" class="link"
+          >{strings.footer.sourceCode}</a
+        >
+      </span>
+    </p>
+  </div>
+</footer>

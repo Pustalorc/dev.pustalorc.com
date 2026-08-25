@@ -1,0 +1,12 @@
+{
+  "name": "Vicente \"Pustalorc\" Pastor",
+  "alias": "Pustalorc",
+  "role": "Lead Developer",
+  "tagline": "Building reliable front-ends, back-ends, game-hosting infrastructure, and the odd game mod since 2016.",
+  "bioShort": "Lead Developer at Pine Hosting, maintaining a game-server hosting panel and its infrastructure automation. Comfortable across C#/.NET, Go, PHP, and JavaScript/TypeScript.",
+  "bioLong": "I'm a Lead Developer at Pine Hosting, a game-server hosting company, where I lead the development team, help maintain our forks of the open-source Pterodactyl Panel & Wings daemon, & lead the Ansible automation that deploys & maintains our node fleet. I also migrated our marketing site from PHP to Astro for an improved development & business experience. Before that I spent two years at Grant Thornton working on internal C#/.NET tooling, as well as taking on subcontract work for other businesses building similar internal systems. I've been writing code since 2016, moving comfortably between C#/.NET, Go, PHP, & JavaScript/TypeScript, with SQL data stores & Docker/Ansible-driven infrastructure along the way.",
+  "location": "United Kingdom",
+  "email": "contact@pustalorc.com",
+  "copyrightStartYear": 2022,
+  "codingSinceYear": 2016
+}

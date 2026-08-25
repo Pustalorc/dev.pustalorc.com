@@ -1,0 +1,20 @@
+[
+  {
+    "language": "Spanish",
+    "institution": null,
+    "achievedScore": "Native Speaker",
+    "yearAchieved": null
+  },
+  {
+    "language": "English",
+    "institution": "IELTS",
+    "achievedScore": "8.0 (C1)",
+    "yearAchieved": 2023
+  },
+  {
+    "language": "French",
+    "institution": "DELF",
+    "achievedScore": "B1",
+    "yearAchieved": 2018
+  }
+]

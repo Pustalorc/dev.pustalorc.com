@@ -1,0 +1,23 @@
+---
+import Button from '@components/Button/index.astro';
+import internal from '@data/links/internal';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { getStrings } from '@utils/i18n';
+
+const strings = getStrings(Astro.currentLocale);
+---
+
+<BaseLayout title={`${strings.notFound.code} - ${strings.notFound.pageTitle}`}>
+  <section
+    class="container flex flex-1 flex-col items-center justify-center gap-4 py-32 text-center"
+  >
+    <p class="prompt">{strings.notFound.errorEyebrow}</p>
+    <h1 class="font-display text-4xl font-bold md:text-6xl">{strings.notFound.code}</h1>
+    <p class="mono text-text-muted">
+      {strings.notFound.commandNotFound}
+      {internal.base}
+      {Astro.url.pathname}
+    </p>
+    <Button href={internal.home} class="mt-4">{strings.notFound.backHome}</Button>
+  </section>
+</BaseLayout>

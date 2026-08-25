@@ -1,31 +1,48 @@
 {
   "name": "dev.pustalorc.com",
-  "version": "3.0.0",
+  "type": "module",
+  "version": "4.0.0",
   "private": true,
-  "description": "Portfolio Website",
+  "description": "Vicente \"Pustalorc\" Pastor's developer portfolio and virtual curriculum",
   "author": "Vicente \"Pustalorc\" Pastor",
-  "keywords": [
-    "gatsby"
-  ],
+  "engines": {
+    "node": ">=22.x"
+  },
+  "packageManager": "npm@11.6.2",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "lint": "npx eslint src/",
-    "lint-fix": "npx eslint --fix src/"
+    "dev": "astro dev",
+    "build": "npm run lint && astro build",
+    "preview": "astro preview",
+    "lint": "npm run lint:eslint && npm run lint:ts",
+    "lint:eslint": "eslint . --ext .js,.mjs,.ts,.astro",
+    "lint:ts": "tsc --noEmit",
+    "lint:fix": "eslint . --ext .js,.mjs,.ts,.astro --fix",
+    "outdated": "npm outdated || true"
   },
   "dependencies": {
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.15.2",
-    "@mui/material": "^5.15.2",
-    "eslint": "^8.56.0",
-    "eslint-plugin-react": "^7.33.2",
-    "gatsby": "^5.13.1",
-    "gatsby-plugin-provide-react": "^1.0.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0"
+    "@astrojs/sitemap": "3.7.3",
+    "@babel/core": "8.0.1",
+    "@babel/eslint-parser": "8.0.1",
+    "@babel/plugin-syntax-jsx": "8.0.1",
+    "@babel/preset-typescript": "8.0.1",
+    "@eslint/js": "10.0.1",
+    "@iconify-json/ion": "1.2.7",
+    "@iconify-json/mingcute": "1.2.8",
+    "@iconify-json/simple-icons": "1.2.93",
+    "@tailwindcss/vite": "4.3.3",
+    "astro": "7.2.6",
+    "astro-eslint-parser": "1.4.0",
+    "astro-icon": "1.2.0",
+    "astro-robots-txt": "1.0.0",
+    "eslint": "10.9.1",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-astro": "1.7.0",
+    "eslint-plugin-perfectionist": "5.10.1",
+    "eslint-plugin-prettier": "5.5.6",
+    "eslint-plugin-unicorn": "73.0.0",
+    "prettier": "3.9.6",
+    "prettier-plugin-astro": "0.14.1",
+    "tailwindcss": "4.3.3",
+    "typescript": "7.0.2"
   }
 }

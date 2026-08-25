@@ -1,0 +1,28 @@
+---
+import Button from '@components/Button/index.astro';
+import external from '@data/links/external';
+import internal from '@data/links/internal';
+import { getProfile } from '@data/profile';
+import { getStrings } from '@utils/i18n';
+
+const profile = await getProfile();
+const strings = getStrings(Astro.currentLocale);
+---
+
+<section class="container flex flex-col gap-6 py-16 md:py-24">
+  <p class="prompt">{strings.hero.greeting}</p>
+  <h1 class="font-display text-4xl font-bold leading-tight md:text-6xl">
+    {profile.name}
+  </h1>
+  <p class="mono text-accent-2 text-lg md:text-xl">{profile.role}</p>
+  <p class="text-text-muted max-w-2xl text-lg">
+    {profile.tagline}
+  </p>
+
+  <div class="mt-4 flex flex-wrap gap-3">
+    <Button href={internal.resume}>{strings.hero.viewResume}</Button>
+    <Button href={internal.projects} variant="secondary">{strings.hero.viewProjects}</Button>
+    <Button href={external.github} variant="secondary" external>{strings.hero.github}</Button>
+    <Button href={external.mailTo} variant="secondary">{strings.hero.emailMe}</Button>
+  </div>
+</section>

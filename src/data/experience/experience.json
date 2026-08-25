@@ -1,0 +1,42 @@
+[
+  {
+    "company": "Pine Hosting",
+    "titles": [
+      {
+        "title": "Lead Developer",
+        "startMonth": 1,
+        "startYear": 2026,
+        "endMonth": null,
+        "endYear": null
+      },
+      {
+        "title": "Senior Software Developer",
+        "startMonth": 9,
+        "startYear": 2024,
+        "endMonth": 1,
+        "endYear": 2026
+      }
+    ],
+    "summary": "Leading the development of Pine Hosting's public website and pricing platform (Astro, TypeScript, Tailwind), and the Ansible automation that deploys and maintains the game-server node fleet. Also set up FreeIPA (with SSSD for machine authentication) and Keycloak via OIDC so every internal system shares a single source of truth for accounts, and maintain the company's forks of the open-source Pterodactyl Panel and Wings daemon."
+  },
+  {
+    "company": "Grant Thornton",
+    "titles": [
+      {
+        "title": "Senior Software Developer",
+        "startMonth": 9,
+        "startYear": 2023,
+        "endMonth": 9,
+        "endYear": 2024
+      },
+      {
+        "title": "Software Developer",
+        "startMonth": 5,
+        "startYear": 2022,
+        "endMonth": 9,
+        "endYear": 2023
+      }
+    ],
+    "summary": "Provisioned and operated client AWS infrastructure with Terraform (VPC, EC2, load balancers, Route 53, ACM, S3, EKS), and built blockchain-based digital identity and document-signing platforms (Solidity/Hardhat smart contracts, Spring Boot, PostgreSQL/MongoDB) for enterprise clients."
+  }
+]

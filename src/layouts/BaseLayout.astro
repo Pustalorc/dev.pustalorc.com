@@ -1,0 +1,75 @@
+---
+import Footer from '@components/Footer/index.astro';
+import Header from '@components/Header/index.astro';
+import internalLinks from '@data/links/internal';
+import { getProfile } from '@data/profile';
+import '@styles/global.css';
+import { defaultLocale, locales } from '@utils/i18n';
+import { getAbsoluteLocaleUrl } from 'astro:i18n';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const profile = await getProfile();
+
+const { title = `${profile.name} - ${profile.role}`, description = profile.bioShort } = Astro.props;
+
+// build.format: 'file' makes Astro.url.pathname for the root route resolve
+// to "/index" (matching the output filename) rather than "/", the actual
+// served URL, so it needs collapsing back down like any other index file.
+const strippedPathname = Astro.url.pathname.replace(/\.html$/, '').replace(/\/index$/, '/');
+const url = internalLinks.base + strippedPathname;
+const copyright = `© ${profile.copyrightStartYear}-${new Date().getFullYear()} ${profile.name}`;
+
+// Locale-agnostic route path (no /es, /fr, etc. prefix), used to look up this
+// same page's URL in every other configured locale for the hreflang tags below.
+const localePrefixPattern = new RegExp(`^/(${locales.join('|')})(?=/|$)`);
+const localeAgnosticPath = strippedPathname.replace(localePrefixPattern, '') || '/';
+
+const alternateLinks = locales.map((locale) => ({
+  locale,
+  href: getAbsoluteLocaleUrl(locale, localeAgnosticPath)
+}));
+---
+
+<!doctype html>
+<html lang={Astro.currentLocale}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href={internalLinks.favicon} type="image/png" />
+    <link rel="canonical" href={url} />
+    {
+      alternateLinks.map(({ locale, href }) => (
+        <link rel="alternate" hreflang={locale} href={href} />
+      ))
+    }
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={getAbsoluteLocaleUrl(defaultLocale, localeAgnosticPath)}
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta name="author" content={profile.name} />
+    <meta name="copyright" content={copyright} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta name="theme-color" content="#05070a" />
+  </head>
+  <body>
+    <Header />
+    <main class="flex flex-grow flex-col">
+      <slot />
+    </main>
+    <Footer copyright={copyright} />
+  </body>
+</html>
