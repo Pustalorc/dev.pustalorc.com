@@ -28,33 +28,24 @@ const isCurrent = latestTitle.endYear === null;
       {isCurrent && <Badge class="text-accent border-accent">{strings.cards.current}</Badge>}
     </div>
     <p class="mono text-accent-2 text-xs">
-      {
-        formatMonthYearRange(
-          earliestTitle.startMonth,
-          earliestTitle.startYear,
-          latestTitle.endMonth,
-          latestTitle.endYear
-        )
-      }
+      {formatMonthYearRange(
+        earliestTitle.startMonth,
+        earliestTitle.startYear,
+        latestTitle.endMonth,
+        latestTitle.endYear
+      )}
     </p>
     <p class="text-text-muted text-sm">{job.summary}</p>
 
     <ul class="border-border mt-1 flex flex-col gap-2 border-l pl-4">
-      {
-        job.titles.map((title) => (
-          <li>
-            <p class="text-sm font-medium">{title.title}</p>
-            <p class="mono text-text-muted text-xs">
-              {formatMonthYearRange(
-                title.startMonth,
-                title.startYear,
-                title.endMonth,
-                title.endYear
-              )}
-            </p>
-          </li>
-        ))
-      }
+      {job.titles.map((title) => (
+        <li>
+          <p class="text-sm font-medium">{title.title}</p>
+          <p class="mono text-text-muted text-xs">
+            {formatMonthYearRange(title.startMonth, title.startYear, title.endMonth, title.endYear)}
+          </p>
+        </li>
+      ))}
     </ul>
   </div>
 </div>

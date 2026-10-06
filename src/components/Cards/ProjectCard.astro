@@ -22,26 +22,22 @@ const strings = getStrings(Astro.currentLocale);
   <p class="text-text-muted">{project.summary}</p>
 
   <details class="group">
-    <summary
-      class="mono text-accent-2 hover:text-accent w-fit cursor-pointer list-none text-xs uppercase tracking-wide"
-    >
+    <summary class="mono text-accent-2 hover:text-accent w-fit cursor-pointer list-none text-xs uppercase tracking-wide">
       <span class="group-open:hidden">{strings.cards.readMore}</span>
       <span class="hidden group-open:inline">{strings.cards.showLess}</span>
     </summary>
     <p class="text-text-muted mt-3 text-sm">{project.full}</p>
   </details>
 
-  {
-    project.href && (
-      <a
-        href={project.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="link mono mt-auto flex w-fit items-center gap-1 text-sm"
-      >
-        {strings.cards.viewSource}
-        <Icon name="mingcute:external-link-line" class="h-3.5 w-3.5" />
-      </a>
-    )
-  }
+  {project.href && (
+    <a
+      href={project.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="link mono mt-auto flex w-fit items-center gap-1 text-sm"
+    >
+      {strings.cards.viewSource}
+      <Icon name="mingcute:external-link-line" class="h-3.5 w-3.5" />
+    </a>
+  )}
 </article>

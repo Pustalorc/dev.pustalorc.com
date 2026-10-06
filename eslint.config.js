@@ -1,6 +1,6 @@
 import babelParser from '@babel/eslint-parser';
 import js from '@eslint/js';
-import astroParser from 'astro-eslint-parser';
+import * as astroParser from 'astro-eslint-parser';
 import astro from 'eslint-plugin-astro';
 import perfectionist from 'eslint-plugin-perfectionist';
 import prettier from 'eslint-plugin-prettier';
@@ -45,10 +45,9 @@ const browserGlobals = {
 };
 
 // TypeScript syntax is parsed via Babel (not @typescript-eslint), which does not
-// depend on the `typescript` package and its version at all. typescript-eslint
-// does not yet support TypeScript 7 (see typescript-eslint#10940), and since this
-// project doesn't use any type-aware lint rules, Babel's syntax-only TS parsing
-// is sufficient here.
+// depend on the `typescript` package and its version at all. This project doesn't
+// use any type-aware lint rules, so Babel's syntax-only TS parsing is sufficient;
+// type checking comes from `tsc --noEmit` (.ts files) and `astro check` (.astro files).
 const babelParserOptions = {
   requireConfigFile: false,
   babelOptions: {

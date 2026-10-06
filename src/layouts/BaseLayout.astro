@@ -40,11 +40,9 @@ const alternateLinks = locales.map((locale) => ({
     <meta charset="utf-8" />
     <link rel="icon" href={internalLinks.favicon} type="image/png" />
     <link rel="canonical" href={url} />
-    {
-      alternateLinks.map(({ locale, href }) => (
-        <link rel="alternate" hreflang={locale} href={href} />
-      ))
-    }
+    {alternateLinks.map(({ locale, href }) => (
+      <link rel="alternate" hreflang={locale} href={href} />
+    ))}
     <link
       rel="alternate"
       hreflang="x-default"

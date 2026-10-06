@@ -28,25 +28,23 @@ const stats = [
 
   <Section eyebrow={strings.home.aboutEyebrow} title={strings.home.aboutTitle} alternate>
     <div class="panel flex flex-col gap-6 p-8 md:flex-row md:items-center">
-      <p class="text-text-muted flex-1 text-lg leading-relaxed">
-        {profile.bioLong}
-      </p>
+      <p class="text-text-muted flex-1 text-lg leading-relaxed">{profile.bioLong}</p>
       <div class="grid flex-none grid-cols-3 gap-6 md:w-72">
-        {
-          stats.map((stat) => (
-            <div class="flex flex-col items-center gap-1 text-center">
-              <span class="font-display text-accent text-3xl font-bold">{stat.value}</span>
-              <span class="text-text-muted mono text-xs uppercase tracking-wide">{stat.label}</span>
-            </div>
-          ))
-        }
+        {stats.map((stat) => (
+          <div class="flex flex-col items-center gap-1 text-center">
+            <span class="font-display text-accent text-3xl font-bold">{stat.value}</span>
+            <span class="text-text-muted mono text-xs uppercase tracking-wide">{stat.label}</span>
+          </div>
+        ))}
       </div>
     </div>
   </Section>
 
   <Section eyebrow={strings.home.featuredEyebrow} title={strings.home.featuredTitle}>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-      {featuredProjects.map((project) => <ProjectCard project={project} />)}
+      {featuredProjects.map((project) => (
+        <ProjectCard project={project} />
+      ))}
     </div>
     <Button href={internal.projects} variant="secondary" class="w-fit">
       {strings.home.viewAllProjects}

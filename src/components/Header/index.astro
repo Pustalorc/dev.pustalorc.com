@@ -24,19 +24,17 @@ const currentPath = Astro.url.pathname;
     </a>
 
     <nav class="hidden items-center gap-6 md:flex">
-      {
-        navLinks.map((link) => (
-          <a
-            href={link.href}
-            class:list={[
-              'mono text-sm transition-colors duration-200',
-              currentPath === link.href ? 'text-accent' : 'text-text-muted hover:text-text'
-            ]}
-          >
-            {link.label}
-          </a>
-        ))
-      }
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            'mono text-sm transition-colors duration-200',
+            currentPath === link.href ? 'text-accent' : 'text-text-muted hover:text-text'
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
     </nav>
 
     <button
@@ -55,21 +53,19 @@ const currentPath = Astro.url.pathname;
     class="border-border bg-bg-950 absolute inset-x-0 top-full hidden flex-col border-t shadow-lg md:hidden"
   >
     <div class="container flex flex-col gap-1 py-3">
-      {
-        navLinks.map((link) => (
-          <a
-            href={link.href}
-            class:list={[
-              'mono rounded-md px-2 py-2 text-sm transition-colors duration-200',
-              currentPath === link.href
-                ? 'text-accent bg-panel'
-                : 'text-text-muted hover:bg-panel hover:text-text'
-            ]}
-          >
-            {link.label}
-          </a>
-        ))
-      }
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            'mono rounded-md px-2 py-2 text-sm transition-colors duration-200',
+            currentPath === link.href
+              ? 'text-accent bg-panel'
+              : 'text-text-muted hover:bg-panel hover:text-text'
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
     </div>
   </nav>
 </header>

@@ -26,32 +26,30 @@ const strings = getStrings(Astro.currentLocale);
 >
   <Section eyebrow={strings.resume.careerEyebrow} title={strings.resume.careerTitle}>
     <div class="flex flex-col">
-      {
-        experience.map((job, index) => (
-          <ExperienceTimelineItem
-            job={job}
-            isLast={index === experience.length - 1 && education.length === 0}
-          />
-        ))
-      }
-      {
-        education.map((entry, index) => (
-          <TimelineItem
-            title={entry.degree}
-            subtitle={entry.institution}
-            startYear={entry.startYear}
-            endYear={entry.endYear}
-            tag={strings.resume.educationTag}
-            isLast={index === education.length - 1}
-          />
-        ))
-      }
+      {experience.map((job, index) => (
+        <ExperienceTimelineItem
+          job={job}
+          isLast={index === experience.length - 1 && education.length === 0}
+        />
+      ))}
+      {education.map((entry, index) => (
+        <TimelineItem
+          title={entry.degree}
+          subtitle={entry.institution}
+          startYear={entry.startYear}
+          endYear={entry.endYear}
+          tag={strings.resume.educationTag}
+          isLast={index === education.length - 1}
+        />
+      ))}
     </div>
   </Section>
 
   <Section eyebrow={strings.resume.stackEyebrow} title={strings.resume.stackTitle} alternate>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-      {skillCategories.map((category) => <SkillCategory category={category} />)}
+      {skillCategories.map((category) => (
+        <SkillCategory category={category} />
+      ))}
     </div>
     <div class="mono text-text-muted flex flex-wrap items-center gap-6 text-xs">
       <div class="flex items-center gap-2">
@@ -67,7 +65,9 @@ const strings = getStrings(Astro.currentLocale);
 
   <Section eyebrow={strings.resume.languagesEyebrow} title={strings.resume.languagesTitle}>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-      {languages.map((language) => <LanguageCard language={language} />)}
+      {languages.map((language) => (
+        <LanguageCard language={language} />
+      ))}
     </div>
   </Section>
 </BaseLayout>

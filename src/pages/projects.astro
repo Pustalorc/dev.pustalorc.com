@@ -20,25 +20,21 @@ const strings = getStrings(Astro.currentLocale);
       <button type="button" class="tag filter-active" data-filter="all">
         {strings.projects.allFilter}
       </button>
-      {
-        categories.map((category) => (
-          <button type="button" class="tag" data-filter={category.slug}>
-            {category.label}
-          </button>
-        ))
-      }
+      {categories.map((category) => (
+        <button type="button" class="tag" data-filter={category.slug}>
+          {category.label}
+        </button>
+      ))}
     </div>
 
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2" id="project-grid">
-      {
-        categories.map((category) =>
-          category.projects.map((project) => (
-            <div data-category={category.slug}>
-              <ProjectCard project={project} />
-            </div>
-          ))
-        )
-      }
+      {categories.map((category) =>
+        category.projects.map((project) => (
+          <div data-category={category.slug}>
+            <ProjectCard project={project} />
+          </div>
+        ))
+      )}
     </div>
   </Section>
 </BaseLayout>

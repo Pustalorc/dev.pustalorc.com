@@ -17,7 +17,9 @@ const strings = getStrings(Astro.currentLocale);
     <p class="text-text-muted mono text-xs">{copyright}</p>
 
     <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-center">
-      <a href={external.mailTo} class="link md:hidden">{strings.footer.emailMe}</a>
+      <a href={external.mailTo} class="link md:hidden">
+        {strings.footer.emailMe}
+      </a>
       <a
         href={external.mailTo}
         aria-label={strings.footer.emailAria}
@@ -44,13 +46,13 @@ const strings = getStrings(Astro.currentLocale);
       </span>
       <span>
         {strings.footer.withText}{' '}
-        <a href={external.astro} target="_blank" rel="noopener noreferrer" class="link"
-          >{strings.footer.astro}</a
-        >
+        <a href={external.astro} target="_blank" rel="noopener noreferrer" class="link">
+          {strings.footer.astro}
+        </a>
         {strings.footer.separator}{' '}
-        <a href={external.githubRepo} target="_blank" rel="noopener noreferrer" class="link"
-          >{strings.footer.sourceCode}</a
-        >
+        <a href={external.githubRepo} target="_blank" rel="noopener noreferrer" class="link">
+          {strings.footer.sourceCode}
+        </a>
       </span>
     </p>
   </div>
