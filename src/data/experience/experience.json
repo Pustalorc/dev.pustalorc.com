@@ -4,7 +4,7 @@
     "titles": [
       {
         "title": "Lead Developer",
-        "startMonth": 1,
+        "startMonth": 9,
         "startYear": 2026,
         "endMonth": null,
         "endYear": null
@@ -13,7 +13,7 @@
         "title": "Senior Software Developer",
         "startMonth": 9,
         "startYear": 2024,
-        "endMonth": 1,
+        "endMonth": 9,
         "endYear": 2026
       }
     ],
