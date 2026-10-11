@@ -3,7 +3,7 @@
     "company": "Pine Hosting",
     "titles": [
       {
-        "title": "Lead Developer",
+        "title": "Lead Software Developer",
         "startMonth": 9,
         "startYear": 2026,
         "endMonth": null,
@@ -17,7 +17,15 @@
         "endYear": 2026
       }
     ],
-    "summary": "Leading the development of Pine Hosting's public website and pricing platform (Astro, TypeScript, Tailwind), and the Ansible automation that deploys and maintains the game-server node fleet. Also set up FreeIPA (with SSSD for machine authentication) and Keycloak via OIDC so every internal system shares a single source of truth for accounts, and maintain the company's forks of the open-source Pterodactyl Panel and Wings daemon."
+    "summary": "Leading software development at a video game server hosting company, from the public website and pricing platform to the customer panel and the automation behind the hosting node fleet.",
+    "highlights": [
+      "Own the technical decision-making for development, and have led developers on the team, introducing GitHub Projects so everyone has clear visibility on current work.",
+      "Migrated the public website and pricing platform from PHP to Astro, TypeScript and Tailwind, replacing slow manual deployments with fast automated ones.",
+      "Built and lead the Ansible automation that deploys and maintains the hosting node fleet, turning a slow, error-prone manual setup into a repeatable process that can be safely re-run without reinstalling the machine.",
+      "Set up FreeIPA (with SSSD for machine authentication) and Keycloak via OIDC, so every node, the Proxmox VE hypervisors and internal apps such as Grafana and Semaphore share a single source of truth for accounts.",
+      "Maintain the company's forks of the open-source Pterodactyl Panel (PHP/Laravel, React) and Wings daemon (Go), which run our customers' video game servers.",
+      "Deployed AWS ElastiCache as the customer panel's cache, manage EC2 and SES, and maintain internal tools written in C#/.NET 8."
+    ]
   },
   {
     "company": "Grant Thornton",
@@ -37,6 +45,16 @@
         "endYear": 2023
       }
     ],
-    "summary": "Provisioned and operated client AWS infrastructure with Terraform (VPC, EC2, load balancers, Route 53, ACM, S3, EKS), and built blockchain-based digital identity and document-signing platforms (Solidity/Hardhat smart contracts, Spring Boot, PostgreSQL/MongoDB) for enterprise clients."
+    "summary": "Worked in a small development team on blockchain, web and cloud projects for enterprise and public-sector clients, and was sub-contracted to other companies for testing and support work.",
+    "highlights": [
+      "Core developer of a blockchain-based digital identity and document-signing platform for enterprise and EU clients, built with Solidity/Hardhat smart contracts, Spring Boot, PostgreSQL and MongoDB.",
+      "Migrated that platform's frontend from Vue to React with a Keycloak OAuth flow, and wrote most of the new React frontends.",
+      "Built a large part of an NFT-based digital collectibles platform for a public-sector client, across smart contracts, backend services and frontend.",
+      "Provisioned and operated client AWS infrastructure with Terraform (VPC, EC2, EKS, load balancers, Route 53, ACM, S3), replacing manual deployments.",
+      "Created internal libraries, including a NodeJS logging module and a React project template, and onboarded interns to the team's codebases.",
+      "Sub-contracted to a national blockchain consortium, building TypeScript REST APIs and Solidity smart contracts on its Hyperledger Besu networks for token issuance, smart accounts, document hash notarization and digital identity credentials, and auditing the network's nodes for unwanted open access.",
+      "Sub-contracted to a multinational bank on a testing project shared with other international banks, defining test cases and documenting the testing process.",
+      "Sub-contracted to a global automotive manufacturer for level 2 and 3 support, answering tickets and fixing database and SQL issues."
+    ]
   }
 ]

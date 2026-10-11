@@ -123,6 +123,29 @@ body {
   }
 }
 
+/* Animated open/close for <details>. Browsers without ::details-content support just open instantly. */
+.expandable {
+  interpolate-size: allow-keywords;
+}
+
+.expandable::details-content {
+  block-size: 0;
+  overflow-y: clip;
+  transition:
+    block-size 300ms ease,
+    content-visibility 300ms allow-discrete;
+}
+
+.expandable[open]::details-content {
+  block-size: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .expandable::details-content {
+    transition: none;
+  }
+}
+
 .timeline-line {
   @apply absolute left-[7px] top-2 bottom-0 w-px bg-border;
 }

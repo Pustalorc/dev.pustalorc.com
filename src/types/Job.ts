@@ -10,4 +10,5 @@ export default interface Job {
   company: string;
   titles: JobTitle[];
   summary: string;
+  highlights?: string[];
 }

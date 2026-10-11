@@ -21,7 +21,7 @@ const strings = getStrings(Astro.currentLocale);
 
   <p class="text-text-muted">{project.summary}</p>
 
-  <details class="group">
+  <details class="expandable group">
     <summary class="mono text-accent-2 hover:text-accent w-fit cursor-pointer list-none text-xs uppercase tracking-wide">
       <span class="group-open:hidden">{strings.cards.readMore}</span>
       <span class="hidden group-open:inline">{strings.cards.showLess}</span>
