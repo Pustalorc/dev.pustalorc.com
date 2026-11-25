@@ -3,7 +3,6 @@ import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 
 import icon from 'astro-icon';
-import robotsTxt from 'astro-robots-txt';
 
 import internalLinks from './src/data/links/internal.ts';
 import { defaultLocale, locales } from './src/utils/i18n.ts';
@@ -34,9 +33,6 @@ export default defineConfig({
         defaultLocale,
         locales: sitemapLocaleTags
       }
-    }),
-    robotsTxt({
-      sitemap: [`${internalLinks.base}/sitemap-index.xml`]
     })
   ],
   compressHTML: true,
